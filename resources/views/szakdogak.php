@@ -10,6 +10,54 @@ live server
 live share
 php intelephense
 thunder client -->
+
+<!-- composer install
+adatbazis létrehzása
+php artisan make:model Neve -m
+php artisan make:controller NeveController -m
+database-migration 
+up függvénybe bele kell írni a táblákat
+php artisan migrate
+
+http-ben
+Modell átalakítása
+controller átalakítása
+
+
+//mindent visszaad
+public function index()
+    {
+        return ModellNeve::get();
+    }
+ //keres
+    public function show($id)
+    {
+        return ModellNeve::find($id);
+    }
+//újat létrehoz
+    public function store(Request $request)
+    {
+     $request->validate([
+    'mezo_nev' => 'required',])
+        return ModellNeve::create($request->all());
+    }
+//módosít
+    public function update(Request $request, $id)
+    {
+        $ModellNeve = ModellNeve::find($id);
+     $request->validate([
+    'mezo_nev' => 'required',])
+
+        $ModellNeve->update($request->all());
+        return $ModellNeve;
+    }
+//töröl
+    public function destroy($id)
+    {
+        $ModellNeve = ModellNeve::find($id);
+        $ModellNeve->delete();
+    return ['message' => 'Törölve'];
+    } -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
