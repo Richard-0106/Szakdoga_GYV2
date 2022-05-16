@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- pluginok:
 
+auto close tag
+auto rename tag
+css formatter
+html css support
+live server
+live share
+php intelephense
+thunder client -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
